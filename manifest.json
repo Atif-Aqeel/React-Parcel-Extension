@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+  
+    "name": "Fun Practice chrome extension",
+    "description": "Chrome extension using react + parcel.",
+    "version": "1.0",
+  
+    "action": {
+      "default_icon": "icon.png",
+      "default_popup": "src/popup.html"
+    },
+  
+  
+    "permissions": [
+      "activeTab",
+      "tabs"
+    ],
+  
+    "content_scripts": [
+      {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["src/build/main.js"]
+      }
+    ]
+  }
